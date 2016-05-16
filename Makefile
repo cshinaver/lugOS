@@ -1,5 +1,6 @@
 CC= gcc
 CXX= g++
+CFLAGS= -g
 TESTFILES=$(wildcard tests/*.cc)
 SOURCEFILES=$(wildcard src/*.c)
 OBJS=$(SOURCEFILES:.c=.o)
@@ -9,7 +10,7 @@ TESTLIBS= -lgtest -lpthread
 TEST_EXECUTABLE=tests/_run_tests
 
 %.o: %.c
-	${CC} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@
 
 %.o: %.cc
 	${CXX} -c ${TESTHEADERS} $< -o $@
