@@ -1,8 +1,8 @@
-enum token_type {
+typedef enum token_type {
     PRINT,
     STRING_LITERAL,
-};
+} token_type;
 
-struct Token {
+typedef struct {
     enum token_type type;
-};
+} Token;
