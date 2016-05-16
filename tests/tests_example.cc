@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
 
-TEST(StackTestSuite, OneEqualsZero) {
+TEST(BasicTestSuite, OneEqualsZero) {
     ASSERT_EQ(1, 0);
 }
